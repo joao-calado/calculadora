@@ -1,6 +1,7 @@
 import React from 'react'
 import './Button.css'
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default props => {
     let classes = 'button '
     classes += props.operation ? 'operation' : ''
@@ -9,7 +10,7 @@ export default props => {
 
     return (
         <button 
-            onClick={e => props.click && props.click(e.label)}
+            onClick={e => props.click && props.click(props.label)}
             className={classes}>
                 {props.label}
         </button>
